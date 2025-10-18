@@ -8,6 +8,13 @@ public interface IInputHelper : IModLinked
     /// <summary>Get the current cursor position.</summary>
     ICursorPosition GetCursorPosition();
 
+    /// <summary>
+    /// Set the current cursor position to the center of the tile.
+    /// </summary>
+    /// <param name="x">The target x position</param>
+    /// <param name="y">The target y position</param>
+    void SetCursorPosition(int x, int y);
+
     /// <summary>Get whether a button is currently pressed.</summary>
     /// <param name="button">The button.</param>
     bool IsDown(SButton button);

@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 using Microsoft.Xna.Framework.Input;
 using StardewModdingAPI.Framework.Input;
 using StardewModdingAPI.Utilities;
@@ -32,6 +33,12 @@ internal class InputHelper : BaseHelper, IInputHelper
     public ICursorPosition GetCursorPosition()
     {
         return this.CurrentInputState().CursorPosition;
+    }
+
+    /// <inheritdoc />
+    public void SetCursorPosition(int x, int y)
+    {
+        this.CurrentInputState().SetMousePosition(x, y);
     }
 
     /// <inheritdoc />
